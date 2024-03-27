@@ -171,7 +171,9 @@ cran2 <- select(cran, size:ip_id)
 ```
 11. Ordena `cran2` en orden ascendente según la variable `ip_id`.
 ```{r}
-
+arrange(cran2, ip_id)
+# Como es en orden ascendente no es necesario indicar nada, ya que por defecto
+# lo ordena de manera ascendente
 ```
 12. Ordena `cran2` en orden descendente según la variable `ip_id`.
 ```{r}
