@@ -288,7 +288,12 @@ top_counts
 ```{r}
 
 
+umbral <- quantile(pack_sum$count, probs = 0.99)
+top_counts_sorted <- pack_sum %>% 
+  filter(count>umbral) %>% arrange(desc(count))
 
+
+top_counts
 
 
 
