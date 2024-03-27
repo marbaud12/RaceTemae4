@@ -161,10 +161,12 @@ filter(cran, size > 100500, r_os == 'linux-gnu')
 ```
 9. Elige aquellas descargas en las que la versión del sistema operativo no está vacía.
 ```{r}
-
+# Para que no este vacia podemos usar el is.na con el signo de exclamación
+filter(cran, !is.na(r_os))
 ```
 10. Almacena en `cran2` todas las columnas entre `size` y `ip_id`. 
 ```{r}
+cran2 <- select(cran, size:ip_id)
 
 ```
 11. Ordena `cran2` en orden ascendente según la variable `ip_id`.
